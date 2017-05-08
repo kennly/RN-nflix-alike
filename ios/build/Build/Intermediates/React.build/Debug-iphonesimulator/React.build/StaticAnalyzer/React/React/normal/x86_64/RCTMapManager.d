@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTMapManager.m \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTMapManager.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTViewManager.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTConvert+CoreLocation.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTConvert+MapKit.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTMap.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTMapAnnotation.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTMapOverlay.h

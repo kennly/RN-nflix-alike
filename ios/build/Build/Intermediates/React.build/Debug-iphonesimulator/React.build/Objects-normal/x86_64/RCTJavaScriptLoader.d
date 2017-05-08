@@ -1,0 +1,26 @@
+dependencies: \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTJavaScriptLoader.mm \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/cxxreact/JSBundleType.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTMultipartDataTask.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTMultipartStreamReader.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/kenneth.au/Documents/Development/others/react-native-toyproj/node_modules/react-native/React/Base/RCTUtils.h

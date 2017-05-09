@@ -18,7 +18,9 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "electron": "^1.6.6",
     "react": "16.0.0-alpha.6",
-    "react-native": "^0.43.4"
+    "react-native": "^0.43.4",
+    "react-native-swiper": "^1.5.4"
   }
 }

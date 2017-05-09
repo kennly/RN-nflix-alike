@@ -1,12 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import List from './components/List';
-import Slider from './components/Slider'
+import Slider from './components/Slider';
+import Header from './components/Header'
+
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Header />
         <Slider />
         <List />
       </View>

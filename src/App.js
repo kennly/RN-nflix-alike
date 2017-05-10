@@ -2,16 +2,43 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import List from './components/List';
 import Slider from './components/Slider';
-import Header from './components/Header'
+import Header from './components/Header';
+import Menu from './components/Menu';
 
+import SideMenu from 'react-native-side-menu';
 
 class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
+  updateMenu(isOpen){
+    this.setState({isOpen})
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Header />
-        <Slider />
-        <List />
+      <View style={{flex: 1}}>
+        <SideMenu
+          menu={<Menu />}
+          isOpen={this.state.isOpen}
+          onChange={(isOpen) => this.updateMenu(isOpen)}
+        >
+          <View style={[{flex: 1}, styles.container]}>
+            <Header toggle={this.toggle.bind(this)}/>
+            <Slider />
+            <List />
+          </View>
+        </SideMenu>
       </View>
     );
   }
@@ -19,10 +46,7 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#000'
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });
 

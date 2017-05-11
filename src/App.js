@@ -34,7 +34,7 @@ class App extends React.Component {
           onChange={(isOpen) => this.updateMenu(isOpen)}
         >
           <View style={[{flex: 1}, styles.container]}>
-            <Header toggle={this.toggle.bind(this)}/>
+            <Header navigator={this.props.navigator} toggle={this.toggle.bind(this)}/>
             <Slider />
             <List />
           </View>
@@ -47,6 +47,7 @@ class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#000'
+
   },
 });
 

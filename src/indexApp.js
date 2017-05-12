@@ -5,10 +5,12 @@ import {
 
 import App from './App';
 import Search from './components/Search';
+import Details from './components/Details';
 import buildStyleInterpolator from 'buildStyleInterpolator';
 
+
 const NoTransition = {
-  opactiy:{
+  opacity:{
     from: 1,
     to: 1,
     min: 1,
@@ -32,6 +34,10 @@ class IndexApp extends Component {
           return(
             <Search {...navigator}/>
           )
+        case 'Details':
+        return(
+          <Details {...navigator}{...route.passProps} />
+        )
 
       }
   }
@@ -56,7 +62,6 @@ class IndexApp extends Component {
       <Navigator
         initialRoute={{ident: 'App'}}
         renderScene={this._renderScene}
-        configureScene={this._configureScene}
       />
     )
   }

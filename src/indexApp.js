@@ -6,6 +6,9 @@ import {
 import App from './App';
 import Search from './components/Search';
 import Details from './components/Details';
+// import Video from './components/VideoPlayerView';
+
+
 import buildStyleInterpolator from 'buildStyleInterpolator';
 
 
@@ -36,7 +39,11 @@ class IndexApp extends Component {
           )
         case 'Details':
         return(
-          <Details {...navigator}{...route.passProps} />
+          <Details {...navigator} {...route.passProps} />
+        )
+        case 'Video':
+        return(
+          <Video {...navigator} {...route.passProps} />
         )
 
       }

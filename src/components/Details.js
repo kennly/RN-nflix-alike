@@ -30,6 +30,10 @@ class Details extends Component {
     }
   }
 
+  static navigationOptions = {
+    headerMode: null
+  }
+
   onShare(){
     Share.share({
       title: 'Designated Survivor',
@@ -59,10 +63,11 @@ class Details extends Component {
   }
 
   render(){
-
-    const {episodes} = this.props.item.details
-    const {name} = this.props.item
-    const {thumbnail, cast, description, year, creator, numOfEpisodes, season} = this.props.item.details
+    const {params} = this.props.navigation.state
+    const {episodes} = params.item.details
+    const {name} = params.item
+    const {navigate} = this.props.navigation
+    const {thumbnail, cast, description, year, creator, numOfEpisodes, season} = params.item.details
 
     return(
       <View style={{flex: 1}}>
@@ -84,7 +89,7 @@ class Details extends Component {
           >
           <View style={styles.buttonPlay}>
             <TouchableWithoutFeedback
-              onPress={null}
+              onPress={() => navigate('Details', {item: item})}
             >
               <View>
                 <Icon

@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {getAll} from '../api/api'
 
 
 const {width, height }= Dimensions.get('window')
@@ -73,8 +74,13 @@ class Search extends Component {
       }
   }
 
+  static navigationOptions = {
+    headerMode: null
+  }
+
   filter(text){
-    const newData = shows_first.filter(function(item){
+    const data = getAll()
+    const newData = data.filter(function(item){
       const itemData = item.name.toUpperCase()
       const textData = text.toUpperCase()
       return itemData.indexOf(textData) > -1
@@ -90,8 +96,15 @@ class Search extends Component {
   }
 
   _renderItem(item){
-    return (
-      <Image key={item.key} style={styles.image} source={{uri: item.image}} />
+    const {navigate} = this.props.navigation
+    return(
+      <TouchableWithoutFeedback
+        onPress={() => navigate('Details', {item: item})}>
+        <Image
+          style={{width: 120, height: 180}}
+          source={{uri: item.image}}
+          />
+      </TouchableWithoutFeedback>
     )
   }
 

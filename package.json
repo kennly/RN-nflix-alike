@@ -28,6 +28,7 @@
     "react-native-swiper": "^1.5.4",
     "react-native-tab-view": "^0.0.65",
     "react-native-vector-icons": "^4.1.1",
-    "react-native-video-controls": "^1.2.0"
+    "react-native-video-controls": "^1.2.0",
+    "react-navigation": "^1.0.0-beta.9"
   }
 }

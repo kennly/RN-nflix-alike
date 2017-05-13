@@ -15,6 +15,10 @@ class App extends React.Component {
     }
   }
 
+  static navigationOptions = {
+    headerMode: 'none'
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -34,9 +38,9 @@ class App extends React.Component {
           onChange={(isOpen) => this.updateMenu(isOpen)}
         >
           <View style={[{flex: 1}, styles.container]}>
-            <Header navigator={this.props.navigator} toggle={this.toggle.bind(this)}/>
+            <Header navigation={this.props.navigation} toggle={this.toggle.bind(this)}/>
             <Slider />
-            <List  navigator={this.props.navigator}/>
+            <List  navigation={this.props.navigation}/>
           </View>
         </SideMenu>
       </View>

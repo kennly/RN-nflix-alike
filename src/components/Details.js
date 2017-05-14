@@ -8,14 +8,14 @@ import {
   TouchableWithoutFeedback,
   ScrollView,
   Dimensions,
-  Share
+  Share,
+  Animated
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import TabsEpisodes from './TabsEpisodes';
 import TextGradient from 'react-native-linear-gradient';
-import * as Animatable from 'react-native-animatable';
 
 const {width, height} = Dimensions.get('window')
 
@@ -24,9 +24,9 @@ class Details extends Component {
   constructor(props){
     super(props)
     this.state = {
-      measures: 0,
-      header: false,
-      animation: ''
+      measuresTitle: 0,
+      measuresSeason: 0,
+      scrollY: new Animated.Value(0)
     }
   }
 
@@ -49,20 +49,26 @@ class Details extends Component {
     })
   }
 
-  handleScroll(event){
-    if(event.nativeEvent.contentOffset.y > this.state.measures){
-      this.setState({
-        header: true,
-        animation: 'slideInDown'
-      })
-    } else {
-      this.setState({
-        header: false
-      })
-    }
-  }
+
 
   render(){
+    const headerNameToggle = this.state.scrollY.interpolate({
+      inputRange : [this.state.measuresTitle, this.state.measuresTitle +1],
+      outputRange : [0, 1]
+    })
+    const headerSeasonHide = this.state.scrollY.interpolate({
+      inputRange: [
+        this.state.measuresSeason -1,
+        this.state.measuresSeason,
+        this.state.measuresSeason + 1],
+      outputRange: [ -width, 0, 0 ]
+    })
+    const headerSeasonToogle = this.state.scrollY.interpolate({
+      inputRange: [
+        this.state.measuresSeason,
+        this.state.measuresSeason + 1],
+      outputRange: [0, 1]
+    })
     const {params} = this.props.navigation.state
     const {episodes} = params.item.details
     const {name} = params.item
@@ -71,17 +77,35 @@ class Details extends Component {
 
     return(
       <View style={{flex: 1}}>
-        {this.state.header ?
-          <Animatable.View
-            style={styles.header}
-            animation={this.state.animation}
+        <TouchableHighlight
+          style={styles.closeButton}
+          onPress={() => goBack()}
+        >
+          <Icon
+            name="close"
+            color="white"
+            size={18}
+          />
+        </TouchableHighlight>
+          <Animated.View
+            style={[styles.header, {opacity: headerNameToggle}]}
           >
             <Text style={styles.headerText}>{name}</Text>
-          </Animatable.View>
-      : null}
-        <ScrollView
+          </Animated.View>
+          <Animated.View
+            style={[styles.header, {opacity: headerSeasonToogle, transform: [{translateY: 0}, {translateX: headerSeasonHide}]}]}
+          >
+            <Text style={styles.headerText}>Season 1</Text>
+          </Animated.View>
+        <Animated.ScrollView
+          scrollEventThrottle = {1}
           style={styles.container}
-          onScroll={this.handleScroll.bind(this)}
+          onScroll={
+            Animated.event(
+              [{nativeEvent: {contentOffset: {y:this.state.scrollY}}}],
+              {useNativeDriver: true}
+            )
+          }
         >
           <Image
             source={{uri: thumbnail}}
@@ -104,7 +128,7 @@ class Details extends Component {
           <View style={styles.nameContainer}
             onLayout={({nativeEvent}) => {
               this.setState({
-                measures: nativeEvent.layout.y
+                measuresTitle: nativeEvent.layout.y
               })
             }}
           >
@@ -149,10 +173,16 @@ class Details extends Component {
               </TouchableHighlight>
             </View>
           </View>
-          <TabsEpisodes
-            data={episodes}
-          />
-        </ScrollView>
+          <View style={styles.nameContainer}
+            onLayout={({nativeEvent}) => {
+              this.setState({
+                measuresSeason: nativeEvent.layout.y + 10
+              })
+            }}
+          >
+          <TabsEpisodes data={episodes}/>
+        </View>
+        </Animated.ScrollView>
       </View>
     )
   }
